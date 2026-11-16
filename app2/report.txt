@@ -1,0 +1,24 @@
+App2 Report
+
+
+Chosen Data Structure:
+- I used a hash table of fixed size 1009 with linear probing for collisions.
+- This structure gives fast search and insert times for IDs, which is what App2 needs most.
+
+Justification:
+- Since the dataset is static and we search by student ID, hashing is best.
+- We don’t need dynamic resizing, and linear probing is simple to implement.
+
+Operation Time Complexities (Worst Case):
+
+- createDataSet: O(1)
+- destroyDataSet: O(n)
+- insertion: O(n) worst case, average O(1)
+- deletion (by ID): O(n) worst case, average O(1)
+- searchID: O(n) worst case, average O(1)
+
+Why Not Other Structures:
+- Linked list or array would have O(n) search by ID.
+- Binary search tree would be harder to manage and not worth the complexity.
+
+
