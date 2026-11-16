@@ -1,0 +1,37 @@
+App1 Report
+
+Chosen Data Structure:
+- I used an array of linked lists where each index corresponds to a specific age from 18 to 30.
+- Each list holds students of that age.
+- This makes searching by age very fast because we know exactly where to look.
+
+Justification:
+- Since App1 needs many searches by age and very few insertions or deletions, this method is efficient.
+- We only need to scan one linked list per age.
+- Also, the number of different ages is small (13 total), so this method is not memory-intensive.
+
+Operation Time Complexities (Worst Case):
+
+- createDataSet: O(1)
+  We just initialize the array of pointers.
+
+- destroyDataSet: O(n)
+  We loop through all the student records and free them.
+
+- insertion: O(1)
+  We always add to the front of the linked list.
+
+- deletion (by age): O(k)
+  We delete all students with a given age. k is the number of students with that age.
+
+- searchAge: O(k)
+  We just go through one linked list at the index for that age.
+
+- maxAgeGap: O(n)
+  We scan through the array once to find the lowest and highest non-empty age.
+
+Why Not Other Structures:
+- A hash table is not good here because it is harder to search by age and you can't easily find max age gap.
+- A single big linked list would make search and deletion by age slower (O(n)).
+
+
